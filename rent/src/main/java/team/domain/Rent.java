@@ -16,6 +16,9 @@ import java.util.Date;
 public class Rent  {
 
     
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    
     
     
     
