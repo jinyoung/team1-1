@@ -70,9 +70,12 @@ public class Rent  {
         bikeRented.publishAfterCommit();
 
         // Get request from Management
-        //team.external.Management management =
-        //    Application.applicationContext.getBean(team.external.ManagementService.class)
-        //    .getManagement(/** mapping value needed */);
+        team.external.Management management =
+           RentApplication.applicationContext.getBean(team.external.ManagementService.class)
+           .getManagement(getProductId());
+
+        if("false".equals(management.getRentAvailableYn()))
+            throw new RuntimeException("The product is already Taken!");
 
     }
 
