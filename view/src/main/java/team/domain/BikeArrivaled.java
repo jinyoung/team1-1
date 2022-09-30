@@ -1,24 +1,14 @@
 package team.domain;
 
-import java.util.*;
-import lombok.*;
-import team.domain.*;
 import team.infra.AbstractEvent;
+import lombok.Data;
+import java.util.*;
 
 @Data
-@ToString
 public class BikeArrivaled extends AbstractEvent {
 
     private Long productId;
     private String productName;
     private Long rentUnitPrice;
     private Boolean rentAvailable;
-
-    public BikeArrivaled(Management aggregate) {
-        super(aggregate);
-    }
-
-    public BikeArrivaled() {
-        super();
-    }
 }

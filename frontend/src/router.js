@@ -10,6 +10,8 @@ import BikeConditionView from "./components/BikeConditionView"
 import BikeConditionViewDetail from "./components/BikeConditionViewDetail"
 import TimeCountedView from "./components/TimeCountedView"
 import TimeCountedViewDetail from "./components/TimeCountedViewDetail"
+import DashboardView from "./components/DashboardView"
+import DashboardViewDetail from "./components/DashboardViewDetail"
 import PaymentHistoryManager from "./components/listers/PaymentHistoryCards"
 import PaymentHistoryDetail from "./components/listers/PaymentHistoryDetail"
 
@@ -44,6 +46,16 @@ export default new Router({
                 path: '/timeCounteds/:id',
                 name: 'TimeCountedViewDetail',
                 component: TimeCountedViewDetail
+            },
+            {
+                path: '/dashboards',
+                name: 'DashboardView',
+                component: DashboardView
+            },
+            {
+                path: '/dashboards/:id',
+                name: 'DashboardViewDetail',
+                component: DashboardViewDetail
             },
             {
                 path: '/paymentHistories',

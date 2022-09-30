@@ -6,15 +6,15 @@ import java.util.Date;
 import lombok.Data;
 
 @Entity
-@Table(name="BikeCondition_table")
+@Table(name="Dashboard_table")
 @Data
-public class BikeCondition {
+public class Dashboard {
 
         @Id
         //@GeneratedValue(strategy=GenerationType.AUTO)
         private Long id;
-        private Long rentCount;
-        private Boolean availableRent;
+        private String rentStatus;
+        private String paymentStatus;
 
 
 }
